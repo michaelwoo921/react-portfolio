@@ -1,23 +1,26 @@
-import logo from './logo.svg';
 import './App.css';
+import React from 'react'
+
+import Header from './Header/Header';
+import SkillMatrix from './SkillMatrix/SkillMatrix';
+import IndustryEquivalency from './IndustryEquivalency/IndustryEquivalency';
+import About from './AboutMe/About';
+import Education from './Education/Education.js'
+import Project from './Projects/Project.js'
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container" >
+     
+      <Header />
+      <IndustryEquivalency />
+      <About />
+      <Education />
+      <SkillMatrix />
+      <Project />
+    
+
+  
     </div>
   );
 }

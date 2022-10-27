@@ -1,38 +1,514 @@
-.App {
-  text-align: center;
+html {
+  font-size: 24px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
+}
+
+/* header */
+.header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 2rem 7rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  margin-right: 2rem;
+  width: 8rem;
+}
+
+.profile-content {
+  align-self: flex-start;
+}
+
+.profile-position {
+  color: #f35b0e;
+}
+
+/* Industry Equvalency */
+.industry {
+  background: rgb(87, 87, 194);
   color: white;
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin: 2rem 7rem;
+  display: flex;
+  justify-content: space-between;
+
+}
+.industry .month {
+  font-size: 1rem;
+}
+.ind-exp {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+ margin:0rem 6rem;
+ margin-bottom: 3rem;
+
+}
+.ind-skill {
+
+  position: relative;
+  width: 13rem;
 }
 
-.App-link {
-  color: #61dafb;
+.skill-duration {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left:45%;
+  margin-top: -60%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.skill-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: -1.2rem;
 }
+
+/* About */
+
+.about-title {
+
+  margin: 2rem 7rem;
+  margin-bottom: .2rem;
+  font-size: 1.6rem;
+}
+
+ .about hr {
+  margin: 0 7rem;
+}
+.about-content {
+  margin: 2rem 7rem;
+  margin-top: 1.3rem;
+  word-spacing: .1rem;
+}
+
+/* education and certification */
+.edu-header {
+  background: orange;
+color: white;
+padding: 1rem;
+font-size: 1.6rem;
+margin: 2rem 7rem;
+display: flex;
+justify-content: space-between;
+}
+.edu-item {
+  margin: 2rem 7rem;
+  display: flex;
+  align-items: center;
+}
+.edu-img {
+ margin-right: 3rem;
+ width: 10rem;
+
+}
+
+.edu-title {
+font-weight: 500;
+}
+
+
+/* skill matrix */
+
+.skill-matrix {
+  background: #D87CA6;
+  color: white;
+  padding: 1rem;
+  font-size: 1.6rem;
+ 
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 7rem;
+}
+
+.skill-matrix span {
+  font-size: 1.2rem;
+}
+
+/* charts */
+.charts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-right: 6rem;
+  margin-left: 6rem;
+}
+
+
+.title {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 1rem;
+  font-size: 1.6rem;
+  font-weight: bolder;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+}
+
+.skills {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+
+
+.pie-content {
+ margin-bottom: 5rem;
+}
+
+.pie-content span, #skill-circle {
+  display: inline-block;
+  width: .8rem;
+  height: .8rem;
+  border-radius: 50%;
+  margin-right: .3rem;
+
+}
+
+.skill-name {
+  font-weight: bold;
+}
+
+.duration {
+  font-size: .8rem;
+}
+
+/* projects */
+
+.projects-header{
+  background: gold;
+  color: rgba(0,0,0,0.6);
+  padding: 1rem;
+  font-size: 1.6rem;
+  margin: 2rem 7rem; 
+}
+
+.project {
+
+  margin: 0rem 7rem;
+}
+
+.project-title {
+  margin: 2rem 0rem; 
+  margin-bottom: 0rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+}
+.project hr {
+  margin-bottom: 2rem;
+}
+
+.resp-title, .tech-title {
+  margin: 1rem 0rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.resp-content span, .tech-item span{
+  width: .3rem;
+  height: .3rem;
+  /* margin-bottom: .2rem;
+  margin-right: .2rem; */
+  margin: .2rem .4rem;
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+}
+
+
+@media  (max-width: 2625px){
+
+html{
+  font-size: 16px;
+}
+
+
+/* skill matrix */
+/* charts */
+
+
+.chart {
+  display: flex;
+  width: 33%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+}
+}
+
+
+@media  (max-width: 1300px){
+  html{
+    font-size: 14px;
+  }
+   
+  }
+
+  @media  (max-width: 1100px){
+
+    .ind-skill {
+
+      position: relative;
+      width: 10rem;
+     
+    }
+
+    .skill-duration {
+      position: absolute;
+      font-weight: bold;
+      font-size: 1.4rem;
+      margin-left:42%;
+      margin-top: -65%;
+    }
+  
+
+
+    .pie-content span, #skill-circle {
+
+      width: .8rem;
+      height: .8rem;
+    }
+    
+    .skill-name {
+      font-weight: bold;
+      font-size: .8rem;
+    
+    }
+    .skills .duration {
+      font-size: .7rem;
+    }
+    }
+
+    @media  (max-width: 900px){
+
+      html {
+        font-size: 10px;
+      }
+      .ind-skill {
+  
+        position: relative;
+        width: 8rem;
+       
+      }
+  
+      .skill-duration {
+        position: absolute;
+        font-weight: bold;
+        font-size: 1.2rem;
+        margin-left:42%;
+        margin-top: -65%;
+      }
+      
+      .skill-title {
+   
+        font-size: 1rem;
+
+      }
+
+      /* skill matrix */
+      .chart { width: 50%;}
+
+      .skill-name, .duration {font-size: 1.2rem; }
+      
+  
+       
+      }
+
+
+      @media  (max-width: 750px){
+        .header {
+          margin: 2rem 3rem;
+        }
+        .industry {
+    
+
+          margin: 2rem 3rem;
+  
+        
+        }
+        .ind-exp {
+ 
+         margin:0rem 3rem;
+         margin-bottom: 2rem;
+        
+        }
+
+        .ind-skill {
+          width: 8rem;
+         
+        }
+        
+.skill-duration {
+  position: absolute;
+  font-weight: bold;
+  font-size: 1.4rem;
+  margin-left:45%;
+  margin-top: -60%;
+}
+
+.skill-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 1.3rem;
+  margin-top: -1.2rem;
+}
+        
+        
+        
+        .about-title {
+
+          margin: 2rem 3rem;
+          margin-bottom: .2rem;
+        }
+        
+         .about hr {
+          margin: 0 3rem;
+        }
+        .about-content {
+          margin: 2rem 3rem;
+          margin-top: 1.3rem;
+     
+        }
+        .edu-header {
+  
+          margin: 2rem 3rem;
+          }
+          .edu-item {
+            margin: 2rem 3rem;
+          }
+          .edu-img {
+           margin-right: 3rem;        
+          }
+
+    
+        .skill-duration {
+          font-size: .8rem;
+          margin-left:42%;
+          margin-top: -60%;
+        }
+        
+        .skill-title { font-size: .8rem;}
+  
+        /* skill matrix */
+        /* skill matrix */
+
+.skill-matrix {
+  margin: 2rem 3rem;
+}
+
+
+/* charts */
+.charts {
+margin: 0 3rem;}
+     
+
+.projects-header{
+  margin: 2rem 3rem; 
+}
+
+.project {
+  margin: 0rem 3rem;
+}
+
+.project-title {
+  margin: 2rem 0rem; 
+  margin-bottom: 0rem;
+
+}
+   
+}
+
+@media  (max-width: 500px){
+html {
+  font-size: 16px;
+}
+
+.industry .month span {
+  display: none;
+}
+.industry .month {
+  margin-top: .5rem;
+}
+
+
+  .ind-exp {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin:0rem 3rem;
+    margin-bottom: 2rem;
+  
+  }
+
+  .ind-skill {
+
+    position: relative;
+    width: 8rem;
+    
+  }
+
+  .edu-item img {
+    display: none;
+  }
+
+  .skill-duration {
+    margin-left:46%;
+    margin-top: -58%;
+  }
+  
+  .skill-title {
+    margin-top: -1rem;
+    font-size: .8rem;
+
+  }
+
+  /* skill matrix */
+  .skill-matrix span {
+    display: none;
+  }
+  .chart { width: 100%;}
+  .skill-name, .duration {font-size: 1rem; }
+    
+  }
+
+  @media (max-width:440px){
+
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+    .profile-content {
+      align-self: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    
+    }
+    .profile-content > h1 {
+      display: inline;
+     
+    }
+    .profile-content > div{
+      display: inline;
+     
+    }
+  }
