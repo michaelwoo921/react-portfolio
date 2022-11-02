@@ -1,514 +1,597 @@
-html {
-  font-size: 24px;
+:root {
+  --my-10: 10rem;
+  --my-5: 5rem;
+  --my-3: 3rem;
+  --my-1: 1rem;
+
+  --mx-3: 3rem;
+  --mx-1: 1rem;
+
+  --px-7: 7rem;
+  --px-4: 4rem;
+  --px-2: 2rem;
+  --px-1: 1rem;
+
+  --p-2: 2rem;
+  --p-1: 1rem;
+
+  --text-bg-1: 3rem;
+  --text-bg-2: 2.5rem;
+  --text-bg-3: 2rem;
+  --text-md-1: 1.6rem;
+  --text-md-2: 1.4rem;
+  --text-md-3: 1.2rem;
+  --text-sm-1: 1rem;
+  --text-sm-2: .8rem;
+
+  --color-orange: orange;
+  --color-tomato: tomato;
+  --color-gold: gold;
+  --color-cyan: cyan;
+  --color-navy: navy;
+
 }
+
+
+* {
+  margin:0;
+  padding:0;
+  box-sizing: inherit;
+  text-decoration: none;
+  color: black;
+}
+/* media query
+1800, 1200 900 600
+*/
+html {
+  font-size: 62.5%;
+}
+
+body {
+  box-sizing: border-box;
+  font-size: var(--text-bg-1);
+  font-weight: 400;
+  letter-spacing: .1rem;
+  line-height: 1.2;
+}
+
 
 .container {
   display: flex;
   flex-direction: column;
+  margin: var(--my-10) 0;
+  padding: 0 var(--px-7);
 }
 
 /* header */
 .header {
   display: flex;
-  align-items: center;
-  margin: 2rem 7rem;
+ 
 }
 
-.profile-pic {
+.header__img {
   border-radius: 50%;
-  margin-right: 2rem;
-  width: 8rem;
+  margin-right: var(--mx-3);
+  width: 20rem;
 }
 
-.profile-content {
-  align-self: flex-start;
+.header__content {
+  align-self: center;
+}
+.header__name {
+  margin: var(--my-1) 0;
 }
 
-.profile-position {
-  color: #f35b0e;
+.header__position {
+  color: var(--color-tomato);
+
+ 
 }
 
 /* Industry Equvalency */
-.industry {
-  background: rgb(87, 87, 194);
+.industry__header {
+  background: var(--color-navy);
   color: white;
-  padding: 1rem;
-  font-size: 1.6rem;
-  margin: 2rem 7rem;
+  padding: var(--p-1);
+  margin-top: var(--my-5);
   display: flex;
   justify-content: space-between;
-
 }
-.industry .month {
-  font-size: 1rem;
+.industry__month {
+  font-size: var(--text-bg-3);
+  color: white;
 }
-.ind-exp {
+.industry__exp {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
- margin:0rem 6rem;
- margin-bottom: 3rem;
+  margin:0 -1rem;
+
 
 }
-.ind-skill {
-
+.industry__skill {
+  font-size: var(--text-bg-3);
   position: relative;
-  width: 13rem;
+  width: 19%; 
 }
 
-.skill-duration {
+.industry__duration {
   position: absolute;
   font-weight: bold;
-  font-size: 1.4rem;
-  margin-left:45%;
-  margin-top: -60%;
+  top:50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
-.skill-title {
+.industry__title {
   text-align: center;
   font-weight: bold;
-  font-size: 1.3rem;
-  margin-top: -1.2rem;
+  margin-top: -2rem;
 }
 
 /* About */
-
-.about-title {
-
-  margin: 2rem 7rem;
-  margin-bottom: .2rem;
-  font-size: 1.6rem;
+.about {
+  margin-top: var(--my-5);
 }
 
- .about hr {
-  margin: 0 7rem;
+
+.about hr {
+  border:none;
+  border-top: .5px solid #ccc;
+  margin-top: .5rem;
 }
-.about-content {
-  margin: 2rem 7rem;
-  margin-top: 1.3rem;
-  word-spacing: .1rem;
+
+.about__content {
+  margin-top: var(--my-3);
+  font-size: var(--text-bg-3);
 }
 
 /* education and certification */
-.edu-header {
-  background: orange;
+.edu__header {
+  background: var(--color-orange);
 color: white;
-padding: 1rem;
-font-size: 1.6rem;
-margin: 2rem 7rem;
+padding: var(--p-1);
+
+margin-top: var(--my-5);
 display: flex;
 justify-content: space-between;
+
 }
-.edu-item {
-  margin: 2rem 7rem;
+
+
+.edu__item {
+  margin: var(--my-3) 0;
+  font-size: var(--text-bg-3);
   display: flex;
   align-items: center;
 }
-.edu-img {
- margin-right: 3rem;
- width: 10rem;
 
+.edu__logo {
+  display: inline-block;
+  width: 15rem;
+  margin-right: var(--mx-3);
 }
 
-.edu-title {
-font-weight: 500;
+.edu__content {
+  display: flex;
+  flex-direction: column;
 }
 
+.edu__degree {
+  font-weight: 700;
+}
+
+.edu__school {
+ position:relative;
+}
+
+.edu__school-icon {
+ width: 2.4rem;
+display: inline-block;
+position: absolute;
+top: 0;
+left: 0;
+}
+.edu__school-name {
+display: inline-block;
+padding-left: 3rem;
+ }
+
+
+.edu__extra a:hover {
+
+  color: blue;
+  cursor: pointer;
+}
+
+.edu__line {
+  border: none;
+  border-top: 1px solid #ccc;
+  
+}
 
 /* skill matrix */
 
-.skill-matrix {
-  background: #D87CA6;
+.skill-matrix__header {
+  background: var(--color-tomato);
   color: white;
   padding: 1rem;
-  font-size: 1.6rem;
  
   display: flex;
   justify-content: space-between;
-  margin: 2rem 7rem;
+  margin-top: var(--my-5);
 }
 
-.skill-matrix span {
-  font-size: 1.2rem;
+.skill-matrix__header span {
+  color: white;
+  font-size: var(--text-md-1);
 }
 
-/* charts */
-.charts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-right: 6rem;
-  margin-left: 6rem;
-}
-
-
-.title {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 1rem;
-  font-size: 1.6rem;
-  font-weight: bolder;
-}
-
-.chart {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-
-}
-
-.skills {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin-left: 2rem;
-  margin-bottom: 5rem;
-}
-
-
-.pie-content {
- margin-bottom: 5rem;
-}
-
-.pie-content span, #skill-circle {
+.skill-matrix__chart {
   display: inline-block;
-  width: .8rem;
-  height: .8rem;
+  width: 33%;
+  text-align: center;
+}
+
+.skill-matrix__title {
+  margin-top: var(--my-3);
+  font-weight: 700;
+
+}
+
+.skill-matrix__skill {
+  display: block;
+  text-align: left;
+  margin-left: 15%;
+}
+
+#skill-matrix__circle {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  margin-right: .3rem;
-
+  margin-right: .5rem;
 }
 
-.skill-name {
+.skill-matrix__name {
   font-weight: bold;
+ font-size: var(--text-bg-3);
 }
 
-.duration {
-  font-size: .8rem;
+.skill-matrix__duration {
+  font-size: var(--text-bg-3);
 }
 
-/* projects */
 
-.projects-header{
-  background: gold;
+.projects__header{
+  background: var(--color-gold);
   color: rgba(0,0,0,0.6);
   padding: 1rem;
-  font-size: 1.6rem;
-  margin: 2rem 7rem; 
+  font-weight: 700;
+  margin-top: var(--my-5);
+
 }
 
-.project {
-
-  margin: 0rem 7rem;
+.project__title {
+  margin-top: var(--my-3);
+  font-weight: 700;
+}
+.project__line {
+  border:none;
+  border-bottom: 1px solid #ccc;
+ 
 }
 
-.project-title {
-  margin: 2rem 0rem; 
-  margin-bottom: 0rem;
-  font-size: 1.6rem;
-  font-weight: 500;
-}
-.project hr {
-  margin-bottom: 2rem;
+.project__content {
+  margin-top: var(--my-1);
+  font-size: var(--text-bg-3);
 }
 
-.resp-title, .tech-title {
-  margin: 1rem 0rem;
-  margin-bottom: 0.5rem;
-  font-weight: 500;
+.project__resp-title, .project__tech-title {
+  margin-top: var(--my-1);
+  font-size: var(--text-bg-3);
 }
 
-.resp-content span, .tech-item span{
-  width: .3rem;
-  height: .3rem;
-  /* margin-bottom: .2rem;
-  margin-right: .2rem; */
-  margin: .2rem .4rem;
+.project__resp-content, .project__tech-item{
+  margin-top: var(--my-1);
+  font-size: var(--text-bg-3);
+}
+
+.project__resp-content span, .project__tech-item span{
+  width: .8rem;
+  height: .8rem;
+
+  margin: .4rem;
   display: inline-block;
   background-color: black;
   border-radius: 50%;
 }
 
 
-@media  (max-width: 2625px){
+@media (max-width: 1800px){
 
-html{
-  font-size: 16px;
-}
-
-
-/* skill matrix */
-/* charts */
-
-
-.chart {
-  display: flex;
-  width: 33%;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-
-}
-}
-
-
-@media  (max-width: 1300px){
-  html{
-    font-size: 14px;
+  
+  .skill-matrix__name {
+    font-weight: bold;
+   font-size: var(--text-md-1);
   }
-   
+  
+  .skill-matrix__duration {
+    font-size: var(--text-md-1);
   }
 
-  @media  (max-width: 1100px){
-
-    .ind-skill {
-
-      position: relative;
-      width: 10rem;
-     
-    }
-
-    .skill-duration {
-      position: absolute;
-      font-weight: bold;
-      font-size: 1.4rem;
-      margin-left:42%;
-      margin-top: -65%;
-    }
-  
-
-
-    .pie-content span, #skill-circle {
-
-      width: .8rem;
-      height: .8rem;
-    }
-    
-    .skill-name {
-      font-weight: bold;
-      font-size: .8rem;
-    
-    }
-    .skills .duration {
-      font-size: .7rem;
-    }
-    }
-
-    @media  (max-width: 900px){
-
-      html {
-        font-size: 10px;
-      }
-      .ind-skill {
-  
-        position: relative;
-        width: 8rem;
-       
-      }
-  
-      .skill-duration {
-        position: absolute;
-        font-weight: bold;
-        font-size: 1.2rem;
-        margin-left:42%;
-        margin-top: -65%;
-      }
-      
-      .skill-title {
-   
-        font-size: 1rem;
-
-      }
-
-      /* skill matrix */
-      .chart { width: 50%;}
-
-      .skill-name, .duration {font-size: 1.2rem; }
-      
-  
-       
-      }
-
-
-      @media  (max-width: 750px){
-        .header {
-          margin: 2rem 3rem;
-        }
-        .industry {
-    
-
-          margin: 2rem 3rem;
-  
-        
-        }
-        .ind-exp {
- 
-         margin:0rem 3rem;
-         margin-bottom: 2rem;
-        
-        }
-
-        .ind-skill {
-          width: 8rem;
-         
-        }
-        
-.skill-duration {
-  position: absolute;
-  font-weight: bold;
-  font-size: 1.4rem;
-  margin-left:45%;
-  margin-top: -60%;
 }
 
-.skill-title {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.3rem;
-  margin-top: -1.2rem;
-}
-        
-        
-        
-        .about-title {
+@media (max-width: 1200px){
+  body{
+    font-size: var(--text-bg-3);
+  }
 
-          margin: 2rem 3rem;
-          margin-bottom: .2rem;
-        }
-        
-         .about hr {
-          margin: 0 3rem;
-        }
-        .about-content {
-          margin: 2rem 3rem;
-          margin-top: 1.3rem;
-     
-        }
-        .edu-header {
-  
-          margin: 2rem 3rem;
-          }
-          .edu-item {
-            margin: 2rem 3rem;
-          }
-          .edu-img {
-           margin-right: 3rem;        
-          }
-
-    
-        .skill-duration {
-          font-size: .8rem;
-          margin-left:42%;
-          margin-top: -60%;
-        }
-        
-        .skill-title { font-size: .8rem;}
-  
-        /* skill matrix */
-        /* skill matrix */
-
-.skill-matrix {
-  margin: 2rem 3rem;
-}
-
-
-/* charts */
-.charts {
-margin: 0 3rem;}
-     
-
-.projects-header{
-  margin: 2rem 3rem; 
-}
-
-.project {
-  margin: 0rem 3rem;
-}
-
-.project-title {
-  margin: 2rem 0rem; 
-  margin-bottom: 0rem;
-
-}
-   
-}
-
-@media  (max-width: 500px){
-html {
-  font-size: 16px;
-}
-
-.industry .month span {
-  display: none;
-}
-.industry .month {
-  margin-top: .5rem;
-}
-
-
-  .ind-exp {
+  .container {
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin:0rem 3rem;
-    margin-bottom: 2rem;
+    flex-direction: column;
+    margin: var(--my-5) 0;
+    padding: 0 var(--px-4);
+  }
+  .header__img {
+    border-radius: 50%;
+    margin-right: var(--mx-3);
+    width: 15rem;
+  }
+  .industry__month {
+    font-size: var(--text-md-2);
+    color: white;
+  }
+  .skill-matrix__header span {
+  color: white;
+  font-size: var(--text-md-2);
+}
+
+
+  .skill-matrix__chart {
+    width: 50%;
+  }
+
+  .skill-matrix__skill {
+    display: block;
+    text-align: left;
+    margin-left: 25%;
+  }
+
   
+.project__content {
+  margin-top: var(--my-1);
+  font-size: var(--text-md-1);
+}
+
+.project__resp-title, .project__tech-title {
+  margin-top: var(--my-1);
+  font-size: var(--text-md-1);
+}
+
+.project__resp-content, .project__tech-item{
+  margin-top: var(--my-1);
+  font-size: var(--text-md-1);
+}
+
+}
+
+
+@media (max-width: 900px){
+  body{
+    font-size: var(--text-md-1);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--my-5) 0;
+    padding: 0 var(--px-2);
+  }
+  .header__img {
+    border-radius: 50%;
+    margin-right: var(--mx-3);
+    width: 10rem;
   }
 
-  .ind-skill {
-
-    position: relative;
-    width: 8rem;
-    
+  .industry__month {
+    font-size: var(--text-md-2);
+    color: white;
   }
-
-  .edu-item img {
-    display: none;
+  .industry__skill {
+    font-size: var(--text-md-2);
   }
-
-  .skill-duration {
-    margin-left:46%;
-    margin-top: -58%;
-  }
-  
-  .skill-title {
+  .industry__title {
     margin-top: -1rem;
-    font-size: .8rem;
-
   }
 
-  /* skill matrix */
-  .skill-matrix span {
-    display: none;
+  .about__content {
+    margin-top: var(--my-3);
+    font-size: var(--text-md-2);
   }
-  .chart { width: 100%;}
-  .skill-name, .duration {font-size: 1rem; }
+
+  .edu__logo {
+    display: inline-block;
+    width: 8rem;
+    margin-right: var(--mx-3);
+  }
+  .edu__content {
+    font-size: var(--text-md-3);
+  }
+  
+  .skill-matrix__skill {
+    display: block;
+    text-align: left;
+    margin-left: 15%;
+  }
+
+  .skill-matrix__name {
+    font-weight: bold;
+   font-size: var(--text-md-3);
+  }
+  
+  .skill-matrix__duration {
+    font-size: var(--text-md-3);
+  }
+
+  .project__content {
+    margin-top: var(--my-1);
+    font-size: var(--text-md-3);
+  }
+  
+  .project__resp-title, .project__tech-title {
+    margin-top: var(--my-1);
+    font-size: var(--text-md-3);
+  }
+  
+  .project__resp-content, .project__tech-item{
+    margin-top: var(--my-1);
+    font-size: var(--text-md-3);
+  }
+
+}
+
+
+@media (max-width: 600px){
+  body{
+    font-size: var(--text-sm-1);
+  }
+  .container {
+    display: flex;
+    flex-direction: column;
+    margin: var(--my-5) 0;
+    padding: 0 var(--px-1);
+  }
+
+  .header__img {
+    border-radius: 50%;
+    margin-right: var(--mx-1);
+    width: 7rem;
+  }
+
+  .header__content {
+    font-size: var(--text-sm-1);
+  }
+
+  .industry__month {
+    font-size: var(--text-sm-2);
+    color: white;
+  }
+  
+  .industry__title {
+
+    font-size: var(--text-sm-2);
+    text-align: center;
+    font-weight: bold;
+    margin-top: -.5rem;
+  }
+
+  .about {
+    margin-top: var(--my-3);
+  }
+
+
+  .about__content {
+    margin-top: var(--my-1);
+    font-size: var(--text-sm-1);
+  
+  }
+
+  .edu__header {
+
+  margin-top: var(--my-3);
+  display: flex;
+  justify-content: space-between;
+  
+  }
+  .edu__logo {
+    /* width: 1rem; */
+   display:none;
+  }
+  
+  .edu__item {
+    margin-top: var(--my-1);
+    display: block;
     
   }
+.edu__line {
+  margin-top: -2rem;
+}
 
-  @media (max-width:440px){
-
-    .header {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-    }
-    .profile-content {
-      align-self: center;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    
-    }
-    .profile-content > h1 {
-      display: inline;
-     
-    }
-    .profile-content > div{
-      display: inline;
-     
-    }
+  .edu__content {
+    font-size: var(--text-sm-1);
   }
+
+  .edu__school-icon {
+    width: var(--text-sm-1);
+   display: inline-block;
+
+   }
+   .edu__school-name {
+    padding-left: var(--px-1);
+     }
+
+    .skill-matrix__header {
+      margin-top: var(--my-3);
+    }
+    .skill-matrix__header span {
+      color: white;
+      font-size: var(--text-sm-2);
+    }
+    
+
+  .skill-matrix__chart {
+    display: inline-block;
+    width: 100%;
+  }
+
+  .skill-matrix__title {
+    font-size: var(--text-md-3);
+    margin-top: var(--my-1);
+    font-weight: 700;
+  
+  }
+  .skill-matrix__contents {
+    margin-top: -2rem;
+    margin-bottom: 2rem;
+  }
+  .skill-matrix__skill {
+
+    display: block;
+    text-align: left;
+    margin-left: 30%;
+  }
+
+  #skill-matrix__circle {
+    width: .8rem;
+    height: .8rem;
+    margin-right: .2rem;
+  
+  }
+  
+  .skill-matrix__name {
+    font-weight: bold;
+   font-size: var(--text-sm-1);
+  }
+  
+  .skill-matrix__duration {
+    font-size: var(--text-sm-1);
+  
+  }
+
+
+
+  .project__content {
+    margin-top: 1rem;
+    font-size: var(--text-sm-1);
+  }
+  .project__resp-title, .project__tech-title {
+    margin-top: var(--my-1);
+    font-size: var(--text-sm-1);
+  }
+  
+  .project__resp-content, .project__tech-item{
+    margin-top: var(--my-1);
+    font-size: var(--text-sm-1);
+  }
+
+}

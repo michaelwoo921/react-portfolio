@@ -8,7 +8,7 @@ const Pie = ({skills}) => {
     const data = skills.map(skill => ({x:1, y: skill.duration, label: ""}));
 
   return (
-    <div className="pie">
+    <div className="skill-matrix__pie">
   
         <VictoryPie 
         data={data}

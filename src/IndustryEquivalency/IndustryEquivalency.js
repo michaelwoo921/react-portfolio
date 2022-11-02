@@ -15,16 +15,16 @@ const data = [
 const IndustryEquivalency = () => {
   return (
     <Fragment>
-        <div className="industry"> 
-          Industry Equivalency  <span className="month"> <span>Equivalency</span> in months</span>
+      <div className="industry__header"> 
+          Industry Equivalency  <span className="industry__month"> Equivalency in months</span>
       </div>
 
-      <div className="ind-exp">{data.map(skill => {
+      <div className="industry__exp">{data.map(skill => {
          const radius = 100*skill.duration/24;
          const innerRadius =radius*0.95;
 
         return (
-            <div className="ind-skill">
+            <div className="industry__skill">
             <VictoryPie 
             labels ={[""]}
             data={[
@@ -35,9 +35,9 @@ const IndustryEquivalency = () => {
             theme ={VictoryTheme.material}
             colorScale={[`${skill.color}`]}
             />
-            <div className="skill-duration"> {skill.duration}</div>
+            <div className="industry__duration"> {skill.duration}</div>
             
-            <div className="skill-title"> {skill.title}</div>
+            <div className="industry__title"> {skill.title}</div>
             
 
             </div>

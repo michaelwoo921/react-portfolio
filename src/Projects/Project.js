@@ -92,24 +92,24 @@ const projects =[
 const Project = () => {
   return (
     <div className="projects">
-        <div className="projects-header">Project</div>
+        <div className="projects__header">Projects</div>
         {projects.map((project, index) => {
             return (
                 <div className="project">
-                    <div className="project-title">{project.title}</div>
-                    <hr />
-                    <div className="project-content">{project.content}</div>
-                    <div className="resp-list">
-                        <div className="resp-title">Roles / Responsibilities</div>
-                        <div className="resp-conntents">
+                    <div className="project__title">{project.title}</div>
+                    <hr className="project__line" />
+                    <div className="project__content">{project.content}</div>
+                    <div className="project__resp-list">
+                        <div className="project__resp-title">Roles / Responsibilities</div>
+                        <div className="project__resp-conntents">
                             {project.responsibility.map((item,index)=> {
                             return (
-                                <div className="resp-content"><span></span> {item}</div>
+                                <div className="project__resp-content"><span></span> {item}</div>
                             )
                         })}</div>
                     </div>
-                    <div className="tech-title"> Environment / Technologies</div>
-                    <div className="tech-item"><span></span> {project.technology}</div>
+                    <div className="project__tech-title"> Environment / Technologies</div>
+                    <div className="project__tech-item"><span></span> {project.technology}</div>
                 </div>
             )
         })}

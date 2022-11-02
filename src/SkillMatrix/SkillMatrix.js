@@ -5,10 +5,10 @@ import data from './data';
 const SkillMatrix = () => {
   return (
     <Fragment>
-         <div className="skill-matrix"> 
-          Skill Matrix <span> All durations represent Equivalency</span>
+         <div className="skill-matrix__header"> 
+          Skill Matrix <span>Duration in months</span>
       </div>
-      <div className="charts">
+      <div className="skill-matrix__charts">
         {data.map((chart,index) => {
           return (
             <Chart chart={chart} key={index}/>
