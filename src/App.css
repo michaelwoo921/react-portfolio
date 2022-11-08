@@ -262,7 +262,9 @@ padding-left: 3rem;
   font-size: var(--text-bg-3);
 }
 
-
+.project {
+  position: relative;
+}
 .projects__header{
   background: var(--color-gold);
   color: rgba(0,0,0,0.6);
@@ -276,6 +278,30 @@ padding-left: 3rem;
   margin-top: var(--my-3);
   font-weight: 700;
 }
+.project__logo {
+  display: inline-block;
+  width: var(--text-bg-1);
+  height: var(--text-bg-1);
+  position: absolute;
+  right: 3rem;
+
+}
+.project__logo img {
+  width: 100%;
+}
+
+.project__logo-2 {
+  display: inline-block;
+  width: var(--text-bg-1);
+  height: var(--text-bg-1);
+  position: absolute;
+  right: 6rem;
+}
+.project__logo-2 img {
+  width: 100%;
+ 
+}
+
 .project__line {
   border:none;
   border-bottom: 1px solid #ccc;
@@ -358,6 +384,26 @@ padding-left: 3rem;
     margin-left: 25%;
   }
 
+
+  .project__logo {
+
+    width: var(--text-bg-3);
+    height: var(--text-bg-3);
+    position: absolute;
+    right: 2rem;
+
+  
+  }
+
+  .project__logo-2 {
+
+    width: var(--text-bg-3);
+    height: var(--text-bg-3);
+    position: absolute;
+    right: 4rem;
+
+  
+  }
   
 .project__content {
   margin-top: var(--my-1);
@@ -432,7 +478,18 @@ padding-left: 3rem;
   .skill-matrix__duration {
     font-size: var(--text-md-3);
   }
-
+  .project__logo {
+    width: var(--text-md-1);
+    height: var(--text-md-1);
+    right: 1rem;
+  }
+  .project__logo-2 {
+    width: var(--text-md-1);
+    height: var(--text-md-1);
+    right: 3rem;
+  }
+  
+  
   .project__content {
     margin-top: var(--my-1);
     font-size: var(--text-md-3);
@@ -578,7 +635,17 @@ padding-left: 3rem;
   
   }
 
+  .project__logo {
+    width: var(--text-md-3);
+    height: var(--text-md-3);
+ 
+  }
 
+  .project__logo-2 {
+    width: var(--text-md-3);
+    height: var(--text-md-3);
+
+  }
 
   .project__content {
     margin-top: 1rem;

@@ -3,6 +3,8 @@ import React from 'react'
 const projects =[
     {
         title: 'Caliber Mobile', 
+        url: "https://github.com/michaelwoo921/caliber-backend-2022",
+        url2:"https://github.com/michaelwoo921/caliber-mobile-2022",
         content: `Caliber is a performance management suite used to collect and analyze evaluations of 
             Revature trainees with the goal of increasing transparency, 
             fostering informed decision making, and creating actionable information. Caliber takes 
@@ -28,10 +30,12 @@ const projects =[
             `Collaborated with other teams for the integration of our project.
             `
         ],
-        technology: "React Native, React, SQL, JavaScript, API Gateway, AWS Lambda, DynamoDB, TypeScript"
+        technology: "React Native, React, SQL, JavaScript, API Gateway, AWS Lambda, DynamoDB, TypeScript",
+        
  },
  {
     title: 'Music Mania',
+    url: "https://github.com/michaelwoo921/2022-music-mania",
     content: `Music Mania is a full-stack web and mobile application that allows users to play, favorite, 
     and buy music. Within each song detail, users
     can follow a link to the song's lyrics. Users can search through the provided music based on 
@@ -65,6 +69,7 @@ const projects =[
  },
  {
     title: 'TRMS-React',
+    url: "https://github.com/michaelwoo921/2021-trms-7",
     content: `TRMS, or Tuition Reimbursement Management System is a full-stack web application that allows employees to submit requests for
     reimbursements for courses, events, and certifications. These requests can then be approved or rejected by the employee's direct supervisor,
     department head, and a benefits coordinator while the employee is able to track the status of their requests.
@@ -96,7 +101,16 @@ const Project = () => {
         {projects.map((project, index) => {
             return (
                 <div className="project">
-                    <div className="project__title">{project.title}</div>
+                    <div className="project__title">{project.title} 
+                    <span className="project__logo"> 
+                    <a href={project.url} rel="noreferrer" target="_blank"><img src="/github-logo.png" alt={project.title}/></a>
+                    </span>
+                    {project.url2 && (
+                        <span className="project__logo-2"> 
+                        <a href={project.url2} rel="noreferrer" target="_blank"><img src="/github-logo.png" alt={project.title}/></a>
+                        </span>
+                    )}
+                    </div>
                     <hr className="project__line" />
                     <div className="project__content">{project.content}</div>
                     <div className="project__resp-list">
