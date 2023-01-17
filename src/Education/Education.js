@@ -13,7 +13,7 @@ const data = [
         school: 'Coursera', 
         date:  "Dec 22, 2019", 
         url: "https://coursera.org/share/7f324de96bcf941749a6cd0ea01cc302",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
     {
         logo: '/coursera.png', 
@@ -21,7 +21,7 @@ const data = [
         school: 'Coursera', 
         date: "June 15, 2022", 
         url: "https://coursera.org/share/7154831089a78b11fdf05cd7d21ac838",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
     {
         logo: '/coursera.png', 
@@ -29,7 +29,7 @@ const data = [
         school: 'Coursera', 
         date: "May 15, 2022", 
         url: "https://coursera.org/share/6a6d414b6734592822d6d47266054ccf",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
 
 
@@ -39,7 +39,7 @@ const data = [
         school: 'Udemy', 
         date: "May 25, 2022", 
         url: "https://www.udemy.com/certificate/UC-bec6f219-ae34-4466-86fc-d69024cd58b6/",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
   
     {
@@ -48,7 +48,7 @@ const data = [
         school: 'Udemy', 
         date: "April 23, 2022", 
         url: "https://www.udemy.com/certificate/UC-a327214d-06f3-4afb-986e-60c7fa3c38a4/",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
    
 
@@ -58,7 +58,7 @@ const data = [
         school: 'Coursera', 
         date: "March 1, 2019", 
         url: "https://coursera.org/share/6d3dc3a21a5042d8908dd35643d6a382",
-        icon: "certificate.jpg"
+        icon: "/certificate.jpg"
     },
 
 ]
