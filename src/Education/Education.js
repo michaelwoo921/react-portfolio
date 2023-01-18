@@ -83,7 +83,7 @@ const Education = () => {
                             ): null}
                             <br />
                             {school.url ? (
-                               <a href={school.url} target="_blank">Online transcript</a>
+                               <a href={school.url} >Online transcript</a>
                              
                             ): null}
                             

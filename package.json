@@ -18,6 +18,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "dev": "node server.js && npm run build",
+    "homepage": "https://michaelwoo921.github.io/portfolio/index.html",
     "start": "node server.js"
   },
   "eslintConfig": {
