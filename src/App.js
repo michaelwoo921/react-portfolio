@@ -10,20 +10,15 @@ import Project from './Projects/Project.js'
 
 function App() {
   return (
-    <div className="container" >
-     
+    <div className="container" >   
       <Header />
       <IndustryEquivalency />
       <About />
       <Education />
       <SkillMatrix />
       <Project />
-    
-
-  
     </div>
   );
-
 
 }
 

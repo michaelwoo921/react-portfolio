@@ -100,14 +100,14 @@ const Project = () => {
         <div className="projects__header">Projects</div>
         {projects.map((project, index) => {
             return (
-                <div className="project">
+                <div className="project" key={index}>
                     <div className="project__title">{project.title} 
                     <span className="project__logo"> 
-                    <a href={project.url} rel="noreferrer" target="_blank"><img src="/github-logo.png" alt={project.title}/></a>
+                    <a href={project.url} rel="noreferrer" target="_blank"><img src={require('../img/github-logo.png')} alt={project.title}/></a>
                     </span>
                     {project.url2 && (
                         <span className="project__logo-2"> 
-                        <a href={project.url2} rel="noreferrer" target="_blank"><img src="/github-logo.png" alt={project.title}/></a>
+                        <a href={project.url2} rel="noreferrer" target="_blank"><img src={require('../img/github-logo.png')} alt={project.title}/></a>
                         </span>
                     )}
                     </div>
