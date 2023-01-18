@@ -16,9 +16,10 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "start": "react-scripts start",
-    "build": "react-scripts build",
-    "homepage": "https://myusername.github.io/react-portfolio"
+    "build": "react-scripts build"
+  
   },
+  "homepage": "https://michaelwoo921.github.io/react-portfolio",
   "eslintConfig": {
     "extends": [
       "react-app",
